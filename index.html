@@ -17,6 +17,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./css/styles.css">
+
+    <script defer src="./js/modal.js"></script>
 </head>
 
 <body>
@@ -62,7 +64,7 @@
         <section class="hero hero_owerlay">
             <div class="container">
                 <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-                <button class="hero__button-order button" type="button">Заказать услугу</button>
+                <button data-modal-open class="hero__button-order button" type="button">Заказать услугу</button>
             </div>            
         </section>
 
@@ -121,14 +123,24 @@
                 <h2 class="job-types__title">Чем мы занимаемся</h2>
                 <ul class="job-types__list">
                     <li class="job-types__item">
-                        <img class="job-types__img" src="./images/job-types/img-1.jpg" width="370" height="294" alt="человек программирует на планшете">
+                        <div class="job-types-thumb">
+                            <img class="job-types__img" src="./images/job-types/img-1.jpg" width="370" height="294" alt="человек программирует на планшете">
+                            <p class="job-types__subtitle">Десктопные приложения</p>
+                        </div>
+                        
                     </li>
                     <li class="job-types__item">
-                        <img class="job-types__img" src="./images/job-types/img-2.jpg" width="370" height="294"
+                        <div class="job-types-thumb">
+                            <img class="job-types__img" src="./images/job-types/img-2.jpg" width="370" height="294"
                             alt="человек смотрит дизайн приложения на мониторе компьютера">
+                            <p class="job-types__subtitle">Мобильные приложения</p>
+                        </div>                        
                     </li>
                     <li class="job-types__item">
-                        <img class="job-types__img" src="./images/job-types/img-3.jpg" width="370" height="294" alt="на планшете изображена цветовая схема">
+                        <div class="job-types-thumb">
+                            <img class="job-types__img" src="./images/job-types/img-3.jpg" width="370" height="294" alt="на планшете изображена цветовая схема">
+                            <p class="job-types__subtitle">Дизайнерские решения</p>
+                        </div>                        
                     </li>
                 </ul>
             </div>            
@@ -393,5 +405,15 @@
             </div>           
         </div>        
     </footer>
+
+    <div data-modal class="backdrop">
+        <div class="modal">            
+            <button data-modal-close class="modal__close">
+                <svg class="modal__close-icon">
+                    <use href="./images/icons.svg#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
 </body>
 </html>
