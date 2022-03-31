@@ -653,6 +653,8 @@ img {
   position: absolute;
   bottom: 1;
   min-height: 294px;
+  display: flex;
+  align-items: center;
   padding: 63px 24px;
   background-color: var(--projects-overlay-bg-color);
   transform: translateY(0);
