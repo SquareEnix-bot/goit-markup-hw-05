@@ -12,5 +12,12 @@
   function toggleModal() {
     refs.backdrop.classList.toggle("backdrop-active");
     refs.modal.classList.toggle("modal-active");
+  } 
+  
+  window.onclick = function(event) {
+  if (event.target == refs.backdrop) {
+    refs.backdrop.classList.toggle("backdrop-active");
+    refs.modal.classList.toggle("modal-active");
   }
+}
 })();
