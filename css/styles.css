@@ -253,12 +253,14 @@ img {
   color: var(--accent-color);
 }
 
-.current.navigation__link::after {
+.current::after,
+.navigation__link:hover::after,
+.navigation__link:focus::after {
   position: absolute;
   bottom: 0;
-  right: 50%;
-  transform: translateX(50%);
+  right: 0;
   content: '';
+  display: inline-flex;
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
